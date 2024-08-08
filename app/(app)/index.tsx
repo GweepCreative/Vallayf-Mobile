@@ -8,11 +8,13 @@ import Text from "@/components/Text";
 
 export default function Main() {
   return (
-    <View className="flex-1 px-8 py-2 ">
-      <Navbar />
+    <View className="flex-1">
       <UserCard />
       <Overview />
-      <Link href={"/(app)/Shop" as any} className="bg-black rounded py-2 px-4 mt-8">
+      <Link
+        href={"/(app)/Shop" as any}
+        className="bg-black rounded py-2 px-4 mt-8"
+      >
         <View>
           <Text>Go To Shop</Text>
         </View>
