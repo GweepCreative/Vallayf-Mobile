@@ -15,7 +15,7 @@ export const calculateTimeRemaining = (targetHour:number) => {
 
   targetTime.setHours(targetHour, 0, 0, 0);
 
-  const timeDiff = targetTime - currentTime;
+  const timeDiff = Number(targetTime) - Number(currentTime);
 
   const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
