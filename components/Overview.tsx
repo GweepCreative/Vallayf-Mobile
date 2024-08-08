@@ -1,7 +1,7 @@
 import { FlatList, Image, View } from "react-native";
 import React from "react";
 import Text from "@/components/Text";
-import OverviewCard from "@/components/Cards/OverviewCard";
+import OverviewCard from "@/components/Cards/(Main)/OverviewCard";
 export default function Overview() {
   return (
     <View className="flex flex-col space-y-3 items-center justify-center mt-4">

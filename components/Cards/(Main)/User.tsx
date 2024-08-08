@@ -1,9 +1,9 @@
 import { View } from "react-native";
 import React from "react";
-import RatingCard from "@/components/Cards/RatingCard";
+import RatingCard from "@/components/Cards/(Main)/RatingCard";
 import { Ranks } from "@/types/Ranks";
-import ProfileCard from "@/components/Cards/ProfileCard";
-import Text from "../Text";
+import ProfileCard from "@/components/Cards/(Main)/ProfileCard";
+import Text from "../../Text";
 export default function UserCard() {
   return (
     <View className="bg-vallayf-900 w-full rounded-3xl border-2 border-vallayf-purple/50 mt-3">
