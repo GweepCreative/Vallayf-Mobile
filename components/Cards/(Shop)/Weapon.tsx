@@ -13,7 +13,7 @@ export default function Weapon({
   weaponPrice: number;
   backgroundImage?: string;
 }) {
-  return backgroundImage ? (
+  return (
     <ImageBackground
       src={backgroundImage}
       resizeMethod="resize"
@@ -22,7 +22,7 @@ export default function Weapon({
       className="overflow-hidden mt-3 bg-vallayf-purple/25 rounded-2xl p-3 space-y-2 border-2 border-vallayf-purple/50"
     >
       <Image
-        className="w-full h-14 rounded-lg "
+        className="w-full h-14 sm:h-36 rounded-lg "
         resizeMethod="resize"
         resizeMode="contain"
         src={displayImage}
@@ -40,26 +40,5 @@ export default function Weapon({
         </View>
       </View>
     </ImageBackground>
-  ) : (
-    <View className="mt-3 bg-vallayf-purple/25 rounded-2xl p-4 space-y-4 border-2 border-vallayf-purple/50">
-      <Image
-        className="w-full h-14 rounded-lg "
-        resizeMethod="resize"
-        resizeMode="contain"
-        src={displayImage}
-      />
-      <View>
-        <Text font="Bold" classNames="text-lg">
-          {weaponName}
-        </Text>
-        <View className="flex flex-row items-center ">
-          <Image
-            source={require("@/assets/images/vp.png")}
-            className="w-4 h-4 mr-1"
-          />
-          <Text font="SemiBold">{weaponPrice}</Text>
-        </View>
-      </View>
-    </View>
-  );
+  )
 }
