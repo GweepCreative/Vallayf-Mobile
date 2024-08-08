@@ -1,15 +1,32 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
 import React from "react";
 import Icon from "../Icon";
-import { Link, useNavigation, useRouter } from "expo-router";
+import { Link, useNavigation } from "expo-router";
 import { cn } from "@/lib/utils";
+
+const styles = StyleSheet.create({
+  shadow: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+
+    elevation: 6,
+  },
+});
 
 export default function TabBar() {
   const pathName = useNavigation();
   var path = pathName.getState().routes[0].state || { index: 0 };
 
   return (
-    <View className="w-full bg-black h-20 rounded-full flex flex-row justify-evenly items-center absolute bottom-5 self-center">
+    <View
+      style={styles.shadow}
+      className="w-full bg-black h-20 rounded-full flex flex-row justify-evenly items-center absolute bottom-5 self-center"
+    >
       <Link
         href={"/(app)" as any}
         className={cn(
@@ -32,7 +49,10 @@ export default function TabBar() {
         asChild
       >
         <TouchableOpacity>
-          <Icon name="ShoppingBasket" color={path.index === 1 ? "#000" : "#fff"} />
+          <Icon
+            name="ShoppingBasket"
+            color={path.index === 1 ? "#000" : "#fff"}
+          />
         </TouchableOpacity>
       </Link>
       <Link

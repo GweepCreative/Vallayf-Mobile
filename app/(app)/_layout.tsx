@@ -1,6 +1,6 @@
-import { View, Text, Image } from "react-native";
+import { Image } from "react-native";
 import React from "react";
-import { Slot, Stack } from "expo-router";
+import { Slot } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Navbar from "@/components/Navbar";
 import TabBar from "@/components/Navigation/TabBar";
@@ -13,14 +13,6 @@ export default function _layout() {
         source={require("@/assets/images/light.png")}
       />
       <Navbar />
-      {/* <Stack
-        screenOptions={{
-          headerShown: false,
-          contentStyle: {
-            backgroundColor: "transparent",
-          },
-        }}
-      /> */}
       <Slot />
       <TabBar />
     </SafeAreaView>
