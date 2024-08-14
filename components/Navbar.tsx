@@ -5,7 +5,7 @@ import Icon from "@/components/Icon";
 
 export default function Navbar() {
   return (
-    <View className="flex flex-row justify-between items-center">
+    <View className="flex flex-row justify-between items-center px-4 pt-4 w-full">
       <View className="flex flex-row justify-center items-center space-x-1 bg-vallayf-600  border border-vallayf-400 px-3 py-1 rounded-full">
         <Image source={require("@/assets/images/vp.png")} className="w-4 h-4" />
         <Text
@@ -15,7 +15,7 @@ export default function Navbar() {
           1775
         </Text>
       </View>
-      <View className="flex flex-row justify-center items-center self-center absolute w-full">
+      <View className="flex flex-row justify-center items-center self-center absolute w-full pl-8 pt-4">
         <Image
           source={require("@/assets/images/LOGO_WHITE.png")}
           className="w-9 h-9 self-center"
